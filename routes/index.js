@@ -1,5 +1,6 @@
 const express = require('express');
 const router  = express.Router();
+<<<<<<< HEAD
 const UserModel = require('../models/user-model.js');
 
 /* GET home page. */
@@ -41,3 +42,12 @@ module.exports = router;
 //      else
 //        console.log(response.sentiment.document);
 //  });
+=======
+
+/* GET home page. */
+router.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+module.exports = router;
+>>>>>>> 83780cedf878f493d4ffb9586359f96ee9413c7c
