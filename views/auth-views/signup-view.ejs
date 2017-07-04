@@ -1,0 +1,27 @@
+<h2>Sign Up</h2>
+
+<% if (typeof invalidMsg ==='string') { %>
+    <p class="invalidMsg"><%= invalidMsg %></p>
+<%}%>
+
+<form id="form" method="post" action="/signup">
+  <label for="first-name-input">First Name</label>
+  <input id="first-name-input" type="text" name="firstName" placeholder="First Name"/>
+  <br />
+
+  <label for="last-name-input">Last Name</label>
+  <input id="last-name-input" type="text" name="lastName" placeholder="Last Name"/>
+  <br />
+
+  <label for="email-input">Email</label>
+  <input id="email-input" type="text" name="email" placeholder="Email" />
+  <br />
+
+  <label for="password-input">Password</label>
+  <input id="password-input" type="password" name="password" placeholder="********" />
+  <br /><br />
+
+  <button>Sign Up</button>
+  <a class="google-btn" href="/auth/google">Login with Google</a>
+  <a class="facebook-btn" href="/auth/facebook">Login with Facebook</a>
+</form>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <header>
+    <div class="logo">
+      <a href="/">
+        <img src="/images/motus-logo.png" />
+      </a>
+    </div>
+    <nav>
+      <% if (typeof currentUser === 'object') { %>
+        <a href="/logout">logout</a>
+      <% } else { %>
+        <a href="/signup">sign up</a>
+        <a href="/login">login</a>
+      <% } %>
+    </nav>
+  </header>
+  <body>
+    <%- body %>
+  </body>
+</html>
