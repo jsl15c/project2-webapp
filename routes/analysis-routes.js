@@ -22,6 +22,15 @@ router.post('/analysis', (req, res, next) => {
     features:{'sentiment':{}}
   };
 
+  // get model to current user
+  UserModel.findById(req.user._id, (err, userInfo) => {
+    if (err) {
+      next(err);
+      return;
+    }
+
+  // ibm watson function that returns a JSON object
+  // with label and score keys
   nlu.analyze(criteria, (err, response) => {
     if (err) {
       console.log('error: ' + err);
@@ -29,16 +38,44 @@ router.post('/analysis', (req, res, next) => {
       return;
     }
     else {
-
-      console.log(response.sentiment.document);
       const newData = new DataModel ({
-        label:
+        // add values from .analyze() to data model
+        label:response.sentiment.document.label,
+        score:response.sentiment.document.score
       });
 
-      console.log('🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕');
-      res.redirect('/');
+
+      // save new values into newData
+      newData.save((err) => {
+        if (err) {
+          // error handling
+          next(err);
+          return;
+        }
+        else {
+          console.log('🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕 🍕');
+          // add data from newData into
+          // UserModel
+          userInfo.data.push(newData);
+          console.log(userInfo);
+          console.log('');
+          // save userInfo to store new
+          // information
+          userInfo.save((err) => {
+            if (err){
+              // error handling
+              next(err);
+              return;
+            }
+            else {
+              // redirect to analysis page
+              res.redirect('/');
+            }
+          });
+        }
+      });
     }
   });
 });
-
+});
 module.exports = router;

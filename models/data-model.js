@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DataSchema = new Schema ({
-  label:{type:Array},
-  score:{type:Array}
+  label:{type:String},
+  score:{type:Number}
 });
 
 const DataModel = mongoose.model('Data', DataSchema);
