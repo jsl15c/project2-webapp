@@ -3,31 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="/stylesheets/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="viewport" content="width=device-width" />
   </head>
-  <header>
-    <div class="logo">
-      <a href="/">
-        <img src="/images/motus-logo.png" />
-      </a>
-    </div>
-    <nav>
-      <% if (typeof currentUser === 'object') { %>
-        <a href="/logout">logout</a>
-      <% } else { %>
-        <a href="/signup">sign up</a>
-        <a href="/login">login</a>
-      <% } %>
-    </nav>
-  </header>
-=======
-    <link rel="stylesheet" href="/stylesheets/style.css">
-  </head>
->>>>>>> 83780cedf878f493d4ffb9586359f96ee9413c7c
   <body>
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src="/images/motus-logo.png" />
+        </a>
+      </div>
+      <nav>
+      <% if (typeof currentUser === 'object') { %>
+          <a href="/logout">logout</a>
+        <% } else { %>
+          <a href="/signup">sign up</a>
+          <a href="/login">login</a>
+        <% } %>
+      </nav>
+    </header>
     <%- body %>
+    <!-- chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
   </body>
 </html>
