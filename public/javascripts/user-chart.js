@@ -10,9 +10,40 @@ var userData = {
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
           pointHighlightStroke: "rgba(220,220,220,1)",
-          data:currentUser.data.score
+          data: userScores
       }
-  ]
+  ],
+  options: {
+      responsive: true,
+      title:{
+          display:true,
+          text:'Chart.js Line Chart'
+      },
+      tooltips: {
+          mode: 'index',
+          intersect: false,
+      },
+      hover: {
+          mode: 'nearest',
+          intersect: true
+      },
+      scales: {
+          xAxes: [{
+              display: true,
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Month'
+              }
+          }],
+          yAxes: [{
+              display: true,
+              scaleLabel: {
+                  display: true,
+                  labelString: 'Value'
+              }
+          }]
+      }
+  }
 };
 
 var ctx = new Chart(document.getElementById("userChart").getContext("2d")).Line(userData);

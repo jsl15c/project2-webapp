@@ -12,7 +12,11 @@
     <header>
       <div class="logo">
         <a href="/">
-          <img src="/images/motus-logo.png" />
+          <% if (typeof currentUser === 'object') { %>
+            <img src="/images/motus-logo-blue.png" />
+          <% } else { %>
+            <img src="/images/motus-logo.png" />
+          <% } %>
         </a>
       </div>
       <nav>

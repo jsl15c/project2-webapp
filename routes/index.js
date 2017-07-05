@@ -4,7 +4,13 @@ const UserModel = require('../models/user-model.js');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
+    let userScores = [];
 
+    if (req.user) {
+      userScores = req.user.data.map(datum => datum.score);
+    }
+
+    res.locals.userScoresBack = userScores;
     res.render('index');
 });
 

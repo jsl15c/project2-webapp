@@ -19,7 +19,7 @@ const UserSchema = new Schema({
   // FACEBOOK users
   facebookId:{type:String},
 
-  data:[DataModel.schema]
+  data:[ DataModel.schema ]
 },
 {
   timestamps:true
