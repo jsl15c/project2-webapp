@@ -28,9 +28,6 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
-<<<<<<< HEAD
 
 # file that contains environment variables for development
 .env
-=======
->>>>>>> 83780cedf878f493d4ffb9586359f96ee9413c7c
