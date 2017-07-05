@@ -54,9 +54,14 @@ body {
     margin:50px auto;
     width:95%;
 
+    body {
+      background:#fff!important;
+    }
+
     form {
       width:50%;
       overflow: hidden;
+      float: left;
 
       #journal-input {
         width:100%;
@@ -87,6 +92,9 @@ body {
         transform:scale(1.1);
         transition:0.3s ease-in;
       }
+    }
+    canvas {
+      float:left;
     }
   }
 }
