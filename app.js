@@ -19,7 +19,7 @@ require('dotenv').config();
 // run all the code inside "passport-config.js"
 require('./config/passport-config.js');
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGO_URI);
 
 const app = express();
 
