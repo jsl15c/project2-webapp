@@ -73,6 +73,9 @@ app.use('/', authRoute);
 const analysisRoute = require('./routes/analysis-routes.js');
 app.use('/', analysisRoute);
 
+// const chartRoute = require('./routes/chart-routes.js');
+// app.use('/', chartRoute);
+
 // ---------------👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽------
 
 // catch 404 and forward to error handler

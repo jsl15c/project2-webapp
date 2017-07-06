@@ -57,7 +57,7 @@ const passport = require('passport');
 // START LOG IN
 router.get('/login', (req, res, next) => {
   if (req.user) {
-    res.redirect('/');
+    res.redirect('/dashboard');
   }
   else {
     res.render('auth-views/login-view.ejs');
@@ -67,7 +67,7 @@ router.get('/login', (req, res, next) => {
 router.post('/login', passport.authenticate(
   'local', // 1st arg -> name of strategy (determined by the strategy's npm package)
   {   // 2nd arg -> settings object
-    successRedirect:'/',
+    successRedirect:'/dashboard',
     failureRedirect:'/login'
   }
 ));

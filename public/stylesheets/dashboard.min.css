@@ -1,1 +1,1 @@
-body{background:#fff}h1,h2,h3,h4,h5,h6,p,a,label{background:linear-gradient(0deg, #0B80BF 0%, #07557F 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}input::placeholder{background:linear-gradient(0deg, #0B80BF 0%, #07557F 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}textarea{border:3px solid #0B80BF}
+body{background:#fff;overflow:visible;height:auto}input::placeholder{background:linear-gradient(0deg, #0B80BF 0%, #07557F 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}textarea{border:3px solid #0B80BF}

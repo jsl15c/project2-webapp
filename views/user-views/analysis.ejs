@@ -1,1 +1,27 @@
-<h2>test</h2>
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheets/dashboard.min.css" />
+  <link rel="stylesheet" href="stylesheets/global.min.css" />
+  <link rel="stylesheet" href="stylesheets/analysis.min.css" />
+</head>
+
+<canvas id="userChart" width="400" height="400"></canvas>
+
+<div class="chart-details">
+  <% userScoresBack.forEach((score, i) => { %>
+    <div class="data-row data-row-<%= i %>">
+      <h3><%= postDate %></h3>
+      <div class="details">
+        <h3><%= score %></h3>
+      </div>
+      <i class="fa fa-plus expand" aria-hidden="true"></i>
+    </div>
+  <% }); %>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+  var userScores = [<%- userScoresBack %>];
+</script>
+<script src="/javascripts/user-chart.js"></script>
+</html>

@@ -1,11 +1,7 @@
 body {
   background:#fff;
-}
-
-h1, h2, h3, h4, h5, h6, p, a, label {
-  background: linear-gradient(0deg, #0B80BF 0%, #07557F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  overflow: visible;
+  height:auto;
 }
 
 input::placeholder {

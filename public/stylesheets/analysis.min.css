@@ -1,0 +1,1 @@
+#userChart{float:left;width:40%}.chart-details{width:50%;float:left}.chart-details .data-row{overflow:hidden}.chart-details .data-row i{float:right}.chart-details .data-row .details{display:none}.chart-details .data-row:nth-child(odd){background:rgba(0,0,0,0.1)}@media screen and (max-width: 589px){#userChart,.chart-details{float:none;width:90%;margin:0 auto}}

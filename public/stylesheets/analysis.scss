@@ -1,0 +1,33 @@
+#userChart {
+  float:left;
+  width:40%;
+}
+
+.chart-details {
+  width:50%;
+  float: left;
+
+  .data-row {
+    overflow: hidden;
+
+    i {
+      float:right;
+    }
+
+    .details {
+      display:none;
+    }
+  }
+
+  .data-row:nth-child(odd) {
+    background: rgba(0,0,0,0.1);
+  }
+}
+
+@media screen and (max-width:589px) {
+  #userChart, .chart-details {
+    float:none;
+    width:90%;
+    margin:0 auto;
+  }
+}

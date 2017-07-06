@@ -1,10 +1,11 @@
 <html>
 <head>
+  <link rel="stylesheet" href="stylesheets/global.min.css" />
   <link rel="stylesheet" href="stylesheets/dashboard.min.css" />
 </head>
 <section class="dashboard-section">
   <h2>Welcome <strong><%= currentUser.firstName %></strong>!</h2>
-    <form action="/analysis" method="post">
+    <form action="/dashboard" method="post">
       <label for="journal-input"></label>
       <textarea name="userEntry" id="journal-input"
       placeholder="How was your day?" onfocus="placeholder=''" onblur="placeholder='How was you day?'"></textarea>
@@ -12,11 +13,5 @@
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </form>
-    <canvas id="userChart" width="400" height="400"></canvas>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-    <script>
-      var userScores = [<%- userScoresBack %>];
-    </script>
-    <script src="javascripts/user-chart.js"></script>
 </section>
 </html>
