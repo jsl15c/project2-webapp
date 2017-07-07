@@ -4,6 +4,10 @@ body {
   height:auto;
 }
 
+.dashboard-section h2 {
+  margin-bottom:20px;
+}
+
 input::placeholder {
   background: linear-gradient(0deg, #0B80BF 0%, #07557F 100%);
   -webkit-background-clip: text;
@@ -12,4 +16,67 @@ input::placeholder {
 
 textarea {
   border: 3px solid #0B80BF;
+}
+
+.profile-box {
+  border:3px solid #0B80BF;
+  height:961px;
+  margin-left: 20px;
+
+  .profile-head {
+    height:33%;
+    text-align: center;
+    line-height:25%;
+    img {
+      padding:50px;
+      margin:auto;
+      border-radius: 100%;
+      width:40%;
+    }
+    .bio-name {
+      color:rgb(75,75,75);
+      -webkit-text-fill-color: inherit!important;
+      font-size:20px;
+    }
+  }
+}
+
+.improvement-box {
+  height:500px;
+  width:100%;
+  border:3px solid #0B80BF;
+
+  h3 {
+    text-align: center;
+    background: #fff;
+    position: relative;
+    top:0;
+    color:rgb(75,75,75);
+    -webkit-text-fill-color:inherit;
+    display: inline;
+    top: -12px;
+    padding: 0 15px;
+    letter-spacing: 2px;
+  }
+}
+
+.dashleft {
+  margin-right:20px;
+  text-align: center;
+}
+
+
+@media screen and (max-width:768px) {
+  .profile-box, .dashleft {
+    margin-left:0;
+    margin-right:0!important;
+  }
+
+  .profile-box {
+    width:100%;
+  }
+
+  .improvement-box {
+    margin:40px 0;
+  }
 }

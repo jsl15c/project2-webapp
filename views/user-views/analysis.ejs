@@ -5,23 +5,38 @@
   <link rel="stylesheet" href="stylesheets/analysis.min.css" />
 </head>
 
-<canvas id="userChart" width="400" height="400"></canvas>
-
+<div class="analysis-section">
+  <!-- <div class="col col-1-2"> -->
+<div class="chart-scroll">
+  <canvas id="userChart" width="5000" height="400"></canvas>
+</div>
+<!-- </div> -->
+<!-- <div class="col col-1-2"> -->
 <div class="chart-details">
-  <% userScoresBack.forEach((score, i) => { %>
+  <% allData.forEach((data, i) => { %>
     <div class="data-row data-row-<%= i %>">
-      <h3><%= postDate %></h3>
-      <div class="details">
-        <h3><%= score %></h3>
+      <h3><%= data.date %></h3>
+      <i class="fa fa-plus expand-<%= i %>" aria-hidden="true"></i>
+      <div class="details details-<%= i %>">
+        <h3><%= data.score %></h3>
+        <p>
+          <%= data.entry %>
+        </p>
       </div>
-      <i class="fa fa-plus expand" aria-hidden="true"></i>
+      <form method="post" action="/analysis/<%=data._id%>/delete">
+        <button>delete</button>
+      </form>
     </div>
   <% }); %>
+<!-- </div> -->
+</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script>
   var userScores = [<%- userScoresBack %>];
+  // var chartLabel = [];
+  // chartLabel.push(<%- date %>);
 </script>
 <script src="/javascripts/user-chart.js"></script>
 </html>

@@ -1,7 +1,5 @@
 var userData = {
-  labels: ["January", "February", "March", "April",
-  "May", "June", "July","August",
-  "November", "December"],
+  labels: ['7/5', '7/6','7/7','7/8','7/9','7/10','7/11', '7/12','7/13','7/14','7/15','7/16'],
   datasets: [
       {
           fillColor: "rgba(220,220,220,0.2)",
@@ -56,7 +54,16 @@ canvas.onclick = function (evt) {
 };
 
 $(document).ready(function() {
-  $('.expand').click(function() {
-    $('.details').slideToggle(300);
+  $('i').click(function() {
+    var num = this.className;
+    console.log(num);
+    var newNum = [];
+    for (let i = 0; i < num.length; i++) {
+      if(parseInt(num[i]) || parseInt(num[i]) === 0) {
+        newNum += num[i];
+      }
+    }
+    console.log(newNum);
+    $(`.details-${newNum}`).slideToggle(300);
   });
 });

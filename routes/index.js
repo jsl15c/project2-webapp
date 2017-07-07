@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   if (req.user) {
       res.redirect('/dashboard');
     }
-    res.render('auth-views/signup-view.ejs');
+    res.render('default-views/home.ejs');
 });
 
 // router.get('/dashboard', (req, res, next) => {

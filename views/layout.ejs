@@ -25,6 +25,8 @@
       </div>
       <nav>
       <% if (typeof currentUser === 'object') { %>
+          <a href="/profile">profile</a>
+          <a href="/analysis">my progress</a>
           <a href="/logout">logout</a>
         <% } else { %>
           <a href="/signup">sign up</a>

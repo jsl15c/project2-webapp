@@ -5,6 +5,8 @@
 </head>
 <section class="dashboard-section">
   <h2>Welcome <strong><%= currentUser.firstName %></strong>!</h2>
+  <div class="col col-1-2">
+    <div class="dashleft">
     <form action="/dashboard" method="post">
       <label for="journal-input"></label>
       <textarea name="userEntry" id="journal-input"
@@ -13,5 +15,24 @@
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </form>
+    <div class="improvement-box">
+      <h3>IMPROVEMENT</h3>
+
+    </div>
+  </div>
+</div>
+  <div class="col col-1-2">
+    <div class="profile-box">
+      <div class="profile-head">
+
+        <img src="images/headshot.png" />
+        <p class="bio-name">
+          <%= currentUser.firstName + " " + currentUser.lastName %>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 </html>

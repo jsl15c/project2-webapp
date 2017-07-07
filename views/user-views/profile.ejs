@@ -1,0 +1,12 @@
+<h2>user profile</h2>
+<form method="post" action="/profile/<%=currentUser._id%>/update">
+  <p>
+    Current email: <%= email %>
+  </p>
+  <p>
+    Change email:
+  </p>
+  <label for="email"></label>
+  <input id="email" type="email" name="email" placeholder="<%= email %>"/>
+  <button>Save Changes</button>
+</form>

@@ -73,8 +73,8 @@ app.use('/', authRoute);
 const analysisRoute = require('./routes/analysis-routes.js');
 app.use('/', analysisRoute);
 
-// const chartRoute = require('./routes/chart-routes.js');
-// app.use('/', chartRoute);
+const profileRoute = require('./routes/profile-routes.js');
+app.use('/', profileRoute);
 
 // ---------------👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽------
 
