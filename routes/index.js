@@ -10,14 +10,4 @@ router.get('/', (req, res, next) => {
     res.render('default-views/home.ejs');
 });
 
-// router.get('/dashboard', (req, res, next) => {
-//     res.locals.userScoresBack = userScores;
-//     if (req.user) {
-//       userScores = req.user.data.map(datum => datum.score);
-//       res.render('user-views/dashboard.ejs');
-//     }
-//     res.redirect('/');
-// });
-
-
 module.exports = router;

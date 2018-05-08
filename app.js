@@ -10,7 +10,6 @@ const session      = require('express-session');  // ORDER MATTERS
 const passport     = require('passport');         // SESSION THEN PASSPORT
 
 
-
 // inport "dotenv" package and load variables from the ".env" file
 // (must be at the top before we try to use the variables)
 require('dotenv').config();

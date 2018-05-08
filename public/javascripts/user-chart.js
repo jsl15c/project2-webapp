@@ -1,5 +1,6 @@
 var userData = {
   labels: ['7/5', '7/6','7/7','7/8','7/9','7/10','7/11', '7/12','7/13','7/14','7/15','7/16'],
+  // labels: [entryDate],
   datasets: [
       {
           fillColor: "rgba(220,220,220,0.2)",
@@ -13,13 +14,11 @@ var userData = {
   ],
   options: {
       responsive: true,
+// Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+      maintainAspectRatio: false,
       title:{
           display:true,
           text:'Chart.js Line Chart'
-      },
-      tooltips: {
-          mode: 'index',
-          intersect: false,
       },
       hover: {
           mode: 'nearest',

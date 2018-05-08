@@ -27,12 +27,21 @@ textarea {
     height:33%;
     text-align: center;
     line-height:25%;
-    img {
-      padding:50px;
+    // img {
+    //   padding:50px;
+    //   margin:auto;
+    //   border-radius: 100%;
+    //   width:40%;
+    // }
+    i {
       margin:auto;
-      border-radius: 100%;
-      width:40%;
+      width:auto;
+      display:block;
+      font-size:5em;
+      padding:20px;
+      color:rgba(0,0,0,0.1);
     }
+
     .bio-name {
       color:rgb(75,75,75);
       -webkit-text-fill-color: inherit!important;

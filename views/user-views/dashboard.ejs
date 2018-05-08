@@ -11,7 +11,7 @@
       <label for="journal-input"></label>
       <textarea name="userEntry" id="journal-input"
       placeholder="How was your day?" onfocus="placeholder=''" onblur="placeholder='How was you day?'"></textarea>
-      <button>
+      <button class="journal=submit">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </form>
@@ -25,7 +25,8 @@
     <div class="profile-box">
       <div class="profile-head">
 
-        <img src="images/headshot.png" />
+        <!-- <img src="images/headshot.png" /> -->
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
         <p class="bio-name">
           <%= currentUser.firstName + " " + currentUser.lastName %>
         </p>
